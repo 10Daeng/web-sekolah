@@ -3,9 +3,6 @@
 namespace App\Observers;
 
 use App\Models\AuditLog;
-use App\Models\Registration;
-use App\Models\Student;
-use App\Models\Post;
 
 class AuditLogObserver
 {
