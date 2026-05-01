@@ -14,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         \App\Models\Registration::observe(\App\Observers\RegistrationObserver::class);
+        \App\Models\Registration::observe(\App\Observers\AuditLogObserver::class);
+        \App\Models\Student::observe(\App\Observers\AuditLogObserver::class);
+        \App\Models\Post::observe(\App\Observers\AuditLogObserver::class);
 
         try {
             $settings = \App\Models\Setting::all();

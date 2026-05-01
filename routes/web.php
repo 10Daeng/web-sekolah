@@ -47,6 +47,20 @@ Route::name('front.')->group(function () {
 
 
 // ──────────────────────────────────────────────
+// DASHBOARD GURU
+// ──────────────────────────────────────────────
+Route::prefix('guru')->middleware(['auth', 'role:guru'])->name('guru.')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\GuruDashboardController::class, 'index'])->name('dashboard');
+});
+
+// ──────────────────────────────────────────────
+// DASHBOARD SISWA
+// ──────────────────────────────────────────────
+Route::prefix('siswa')->middleware(['auth', 'role:siswa|wali_murid'])->name('siswa.')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\SiswaDashboardController::class, 'index'])->name('dashboard');
+});
+
+// ──────────────────────────────────────────────
 // ADMIN PANEL (Filament atau Custom)
 // ──────────────────────────────────────────────
 Route::prefix('admin')->middleware(['auth', 'role:super_admin|admin_tu|guru'])->name('admin.')->group(function () {
