@@ -1,0 +1,47 @@
+/vendor/
+/node_modules/
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# Laravel
+/bootstrap/cache/*.php
+/bootstrap/cache/*.json
+/storage/app/public/*
+/storage/app/private/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Database SQLite
+*.sqlite
+*.sqlite3
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Filament
+public/css/filament
+public/js/filament
